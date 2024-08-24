@@ -49,18 +49,11 @@ function Game() {
     return (
         <div style={{textAlign:"start"}}>
            <h1 style={{ fontSize: "20px", color: endGame&&pointNext < inputPoint ? "red" :"#00a67d"  }}>
-           {endGame? <div>{pointNext < inputPoint ? "GAME OVER" : "ALL CLEARED"}</div>: "LET'S PLAY"
-}
-
+           {endGame? <div>{pointNext < inputPoint ? "GAME OVER" : "ALL CLEARED"}</div>: "LET'S PLAY"}
            </h1>
             <div style={{display:"flex"}}>
                 <div style={{width:"30%"}}> Points:</div>
-                <input onChange={(e) => 
-                    {
-                        setInputPoint(parseInt(e.target.value))
-                    setSelectedPoint(parseInt(e.target.value))
-                    }
-                    } type="text"/>
+                <input onChange={(e) =>{setInputPoint(parseInt(e.target.value))}} type="text"/>
             </div>
             <div style={{display:"flex"}}> 
                 <div style={{width:"30%"}}>Time: </div>  
