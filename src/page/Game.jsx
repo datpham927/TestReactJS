@@ -3,7 +3,7 @@ import CircleButton from '../component/CircleButton';
 
 function Game() {
     const [inputPoint, setInputPoint] = useState(0);
-    const [pointNext, setPointNext] = useState(1); // Track the next expected circle to click
+    const [pointNext, setPointNext] = useState(1); 
     const [time, setTime] = useState(0);
     const [circles, setCircles] = useState([]);
     const [isRestart, setIsRestart] = useState(false);
@@ -35,7 +35,7 @@ function Game() {
         }));
     };
     const handleClickCircle = (id) => {
-        if(endGame) { alert('Bạn đã thua');return };
+        if(endGame) { alert('Bạn đã thua!');return };
         if (id === pointNext) {
             setSelectedPoints(e=>[...e, id])
             setPointNext(pointNext + 1);
@@ -48,7 +48,6 @@ function Game() {
 
     return (
         <div style={{textAlign:"start"}}>
-           
            <h1 style={{ fontSize: "20px", color: endGame ? "red" :"#00a67d"  }}>
              {endGame ? <div>{pointNext > inputPoint ?  "ALL CLEARED" : "GAME OVER"}</div>:"LET'S PLAY"}
            </h1>
