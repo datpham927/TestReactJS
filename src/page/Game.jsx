@@ -10,13 +10,13 @@ function Game() {
     const [endGame, setEndGame] = useState(false);
     const [selectedPoints, setSelectedPoints] = useState([]);
     useEffect(() => {
-        if (isRestart) {
+        if (isRestart && !endGame) {  
             const timer = setInterval(() => {
                 setTime((prev) => prev + 0.1);
             }, 100);
             return () => clearInterval(timer);
         }
-    }, [isRestart]);
+    }, [isRestart, endGame]);
 
     const handleRestartGame = () => {
         if(!inputPoint){ alert("Vui lòng nhập Point!"); return}
