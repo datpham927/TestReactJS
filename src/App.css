@@ -54,7 +54,7 @@
 }
 
 .active.circle-button{
-  animation: activeBg 1s forwards;
+  animation: activeBg 2s forwards;
 }
 @keyframes activeBg {
   from {background-color: rgba(255, 0, 0, 0.1);}  
